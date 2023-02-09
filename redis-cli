@@ -1,0 +1,61 @@
+127.0.0.1:6379> sadd persons abi nisha vel sri
+(integer) 4
+127.0.0.1:6379> smembers persons
+1) "sri"
+2) "vel"
+3) "nisha"
+4) "abi"
+127.0.0.1:6379> sadd person_id 98 81 100 45
+(integer) 4
+127.0.0.1:6379> smembers person_id
+1) "45"
+2) "81"
+3) "98"
+4) "100"
+127.0.0.1:6379> sadd person_city salem chennai erode mumbai
+(integer) 4
+127.0.0.1:6379> smembers person_city
+1) "chennai"
+2) "erode"
+3) "salem"
+4) "mumbai"
+127.0.0.1:6379> sadd person_contactnumber 9080885297 8965312765 9064279456 7654890432
+(integer) 4
+127.0.0.1:6379> smembers person_contactnumber
+1) "7654890432"
+2) "8965312765"
+3) "9064279456"
+4) "9080885297"
+127.0.0.1:6379> sadd person_age 21 26 28 20
+(integer) 4
+127.0.0.1:6379> smembers person_age
+1) "20"
+2) "21"
+3) "26"
+4) "28"
+127.0.0.1:6379> sadd person_gender female female male male
+(integer) 2
+127.0.0.1:6379> smembers person_gender
+1) "male"
+2) "female"
+127.0.0.1:6379> sadd person_dob jan1 aug5 sep9 oct2
+(integer) 4
+127.0.0.1:6379> smembers person_dob
+1) "sep9"
+2) "aug5"
+3) "oct2"
+4) "jan1"
+127.0.0.1:6379> sadd person_qualification B.E B.A M.Tech B.Tech
+(integer) 4
+127.0.0.1:6379> spop person_qualification
+"M.Tech"
+127.0.0.1:6379> smembers person_qualification
+1) "B.A"
+2) "B.E"
+3) "B.Tech"
+127.0.0.1:6379> del person_age
+(integer) 1
+127.0.0.1:6379> smembers person_age
+(empty list or set)
+127.0.0.1:6379> save
+ok
